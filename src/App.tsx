@@ -113,15 +113,17 @@ export default function App() {
     const day = new Date().getDay();
     setCurrentDayNumber(day);
 
-    // Watch scroll for dynamic header styling
+    // Watch scroll for dynamic header styling with passive flag for high scrolling performance
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      const crossedThreshold = window.scrollY > 40;
+      setIsScrolled((prev) => {
+        if (prev !== crossedThreshold) {
+          return crossedThreshold;
+        }
+        return prev;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
