@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-exo: "Exo 2", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  
+  --color-bg-warm: #F5F5F0;
+  --color-primary-blue: #1B3A6B;
+  --color-accent-yellow: #F5C518;
+  --color-deep-navy: #0F2347;
+  --color-light-navy: #2A5298;
+  --color-near-black: #181818;
+  --color-dark-surface: #111927;
+  --color-medium-gray: #5A6070;
+  --color-light-gray: #E4E6EA;
+  --color-muted-text: #8090A0;
+}
+
+/* Custom styles and utilities */
+.bg-halftone {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Clip paths for angular transitions */
+.clip-diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+
+.clip-diagonal-top {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-diagonal-both {
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+}
+
+/* Base resets */
+body {
+  background-color: #F5F5F0;
+  font-family: "Nunito", sans-serif;
+  color: #5A6070;
+  overflow-x: hidden;
+}
+
+/* Scroll margin for anchors so navigation doesn't hide headers */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+

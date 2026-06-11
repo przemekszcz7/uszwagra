@@ -1,0 +1,6 @@
+{
+  "name": "Warsztat u Szwagra",
+  "description": "Profesjonalny i przyjazny warsztat samochodowy w Grudziądzu. Najlepsze ceny, szybka realizacja i świetna atmosfera.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
