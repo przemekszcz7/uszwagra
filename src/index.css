@@ -27,14 +27,20 @@
 /* Clip paths for angular transitions */
 .clip-diagonal-bottom {
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  will-change: transform, clip-path;
+  transform: translate3d(0,0,0);
 }
 
 .clip-diagonal-top {
   clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  will-change: transform, clip-path;
+  transform: translate3d(0,0,0);
 }
 
 .clip-diagonal-both {
   clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  will-change: transform, clip-path;
+  transform: translate3d(0,0,0);
 }
 
 /* Base resets */
@@ -43,6 +49,14 @@ body {
   font-family: "Nunito", sans-serif;
   color: #5A6070;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header optimization */
+header {
+  will-change: transform, background-color, box-shadow;
+  transform: translate3d(0,0,0);
 }
 
 /* Scroll margin for anchors so navigation doesn't hide headers */
